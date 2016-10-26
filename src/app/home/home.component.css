@@ -1,0 +1,7 @@
+.other {
+	padding-top: 20px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: none;
+	justify-content: center;
+}
