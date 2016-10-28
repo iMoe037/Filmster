@@ -1,0 +1,55 @@
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+.baseline {
+  align-items: baseline;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.nav-container {
+  border-bottom: 2px solid rgba(34,36,38,.15);
+  padding: 1em;
+  min-height: 3em;
+  margin-bottom: 1em;
+}
+
+.brand {
+  padding-right: 1em;
+}
+
+.logo {
+  padding-right: .3em;
+  font-size: 1.8em;
+}
+
+.title {
+  font-size: 1.5em;
+}
+
+.item {
+  padding: 1em .5em 1em .5em;
+  font-size: 1.08em;
+  letter-spacing: 1px;
+  transition: color .5s;
+  cursor: pointer;
+
+  &:hover {
+  	color: orange;
+  	border-bottom: 2px solid orange;
+  }
+}
+
+.active {
+  color: orange;
+  border-bottom: 2px solid orange;
+}
+

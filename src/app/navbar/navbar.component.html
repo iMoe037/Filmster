@@ -1,19 +1,15 @@
-<div class="ui secondary teal pointing menu">
-    <div class="header item">
-        <i class="main-logo fa fa-ticket" aria-hidden="true"></i> {{title}}
+<div class="flex-row no-wrap baseline space-between nav-container">
+    <div class="brand flex-row no-wrap baseline">
+        <div class="logo">
+            <i class="main-logo fa fa-ticket" aria-hidden="true"></i>
+        </div>
+        <div class="title">
+            {{title}}
+        </div>
     </div>
-    <a class="active item">
-    Home
-  </a>
-      <a class="item" (click)="gotoMovies()">
-    Movies
-  </a>
-    <a class="item">
-    About
-  </a>
-    <div class="right menu">
-        <a class="ui item">
-      Search Here
-    </a>
+    <div>
+        <a [ngClass]="{'active': active('') }" class="item" (click)="gotoLink($event)">Home</a>
+        <a [ngClass]="{'active': active('movies') }" class="item" (click)="gotoLink($event)">Movies</a>
+        <a [ngClass]="{'active': active('about') }" class="item" (click)="gotoLink($event)">About</a>
     </div>
 </div>

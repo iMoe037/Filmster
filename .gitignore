@@ -32,3 +32,8 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
+
+#Keys
+/src/keys.ts
+/src/keys.js
+/src/keys.js.map
