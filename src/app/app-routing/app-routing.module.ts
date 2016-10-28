@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from '../home/home.component';
 import { MovieListComponent } from '../movie-list/movie-list.component';
+import { AboutComponent } from '../about/about.component';
 
 const routes: Routes = [
 	{
@@ -17,6 +18,10 @@ const routes: Routes = [
 	{
 		path: 'movies',
 		component: MovieListComponent
+	},
+	{
+		path: 'about',
+		component: AboutComponent
 	}
 
 ];
@@ -27,4 +32,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routedComponents = [HomeComponent, MovieListComponent];
+export const routedComponents = [HomeComponent, MovieListComponent, AboutComponent];

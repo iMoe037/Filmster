@@ -9,13 +9,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule, routedComponents } from './app-routing/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { MovieApiService } from './movie-api.service';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    routedComponents
+    routedComponents,
+    AboutComponent
   ],
   imports: [
     AppRoutingModule,
