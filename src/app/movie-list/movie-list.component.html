@@ -1,3 +1,8 @@
-<div *ngFor="let movie of movies">
-    <img src="{{hasImage(movie.poster_path)}}">
+<div class="container">
+    <div class="row wrap justify-c">
+        <div class="movie-container" 
+        	*ngFor="let movie of movies"
+        	[style.background-image]="'url(' + hasImage(movie.poster_path, movie.original_title)+ ')'" >
+        </div>
+    </div>
 </div>
