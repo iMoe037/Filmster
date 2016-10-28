@@ -1,15 +1,15 @@
-<div class="flex-row no-wrap baseline space-between nav-container">
-    <div class="brand flex-row no-wrap baseline">
-        <div class="logo">
-            <i class="main-logo fa fa-ticket" aria-hidden="true"></i>
+<div class="container nav">
+    <div class="row justify-sb">
+        <div class="row justify-fs align-i-c">
+            <div class="logo">
+                <i class="fa fa-ticket" aria-hidden="true"></i>
+            </div>
+            <div class="title">{{title}}</div>
         </div>
-        <div class="title">
-            {{title}}
+        <div class="row justify-fe">
+            <a [ngClass]="{'active': active('') }" class="item" (click)="gotoLink($event)">Home</a>
+            <a [ngClass]="{'active': active('movies') }" class="item" (click)="gotoLink($event)">Movies</a>
+            <a [ngClass]="{'active': active('about') }" class="item" (click)="gotoLink($event)">About</a>
         </div>
-    </div>
-    <div>
-        <a [ngClass]="{'active': active('') }" class="item" (click)="gotoLink($event)">Home</a>
-        <a [ngClass]="{'active': active('movies') }" class="item" (click)="gotoLink($event)">Movies</a>
-        <a [ngClass]="{'active': active('about') }" class="item" (click)="gotoLink($event)">About</a>
     </div>
 </div>
