@@ -10,6 +10,7 @@ import { AppRoutingModule, routedComponents } from './app-routing/app-routing.mo
 import { HomeComponent } from './home/home.component';
 import { MovieApiService } from './movie-api.service';
 import { AboutComponent } from './about/about.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AboutComponent } from './about/about.component';
     NavbarComponent,
     HomeComponent,
     routedComponents,
-    AboutComponent
+    AboutComponent,
+    PaginationComponent
   ],
   imports: [
     AppRoutingModule,
