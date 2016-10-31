@@ -1,0 +1,13 @@
+<div class="container">
+	<div class="row justify-c">
+		<ul class="pagination">
+			<li (click)="goToFirst()"><<</li>
+			<li (click)="goBack()"><</li>
+			<li *ngFor="let page of pages; let i = index;" [class.pageActive]="i === 2" (click)="goToPage($event)">
+			{{page}}
+			</li>
+			<li (click)="goForward()">></li>
+			<li (click)="goToLast()">>></li>
+		</ul>
+	</div>
+</div>

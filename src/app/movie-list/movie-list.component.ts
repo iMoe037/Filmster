@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieApiService } from '../movie-api.service';
-import { Movie } from '../movie'
+import { Movie } from '../movie';
+import { PaginationComponent } from '../pagination/pagination.component';
 
 @Component({
   selector: 'app-movie-list',
