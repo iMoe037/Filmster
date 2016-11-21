@@ -18,7 +18,7 @@ export class MovieListComponent implements OnInit {
   	) { }
 
   ngOnInit() {
-  	this.movieApiService.getMovies()
+  	this.movieApiService.getMovies(1)
   		.subscribe(
   			movies => {
   				this.movies = movies;
@@ -31,5 +31,15 @@ export class MovieListComponent implements OnInit {
     const beginLink = 'http://image.tmdb.org/t/p/w342';
     return ImgLink ? (beginLink + ImgLink) : 'https://placeholdit.imgix.net/~text?txtsize=40&txt=No+Image+Available+%3D%28&w=342&h=513&txttrack=0';
   }
+
+	onPageChange(page: number) {
+		this.movieApiService.getMovies(page)
+			.subscribe(
+				movies => {
+					this.movies = movies;
+				},
+				error => this.errorMessage = <any>error
+			)
+	}
 
 }

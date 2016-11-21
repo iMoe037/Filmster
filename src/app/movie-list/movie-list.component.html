@@ -5,5 +5,5 @@
         	[style.background-image]="'url(' + hasImage(movie.poster_path, movie.original_title)+ ')'" >
         </div>
     </div>
-    <app-pagination></app-pagination>
+    <app-pagination (onPageChange)="onPageChange($event)"></app-pagination>
 </div>
