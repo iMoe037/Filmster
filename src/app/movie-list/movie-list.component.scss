@@ -1,6 +1,66 @@
+@import "../../scss/milligram/Color";
+
 .movie-container {
 	width: 17.813vw;
 	height: 26.719vw;
 	background-size: cover;
 	margin: 1rem;
+	border-radius: 5px;
+}
+
+.modal-background {
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	-webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(15px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: scale(1.10);
+}
+
+.modal-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, .6);
+}
+
+.modal-content * {
+	color: white;
+}
+
+.padding {
+	padding: 2rem;
+}
+
+.modal-move-links {
+	color: white;
+	font-size: x-large;
+}
+
+.modal-move-links:hover {
+	color: $color-primary;
+}
+
+.padding-top {
+	padding-top: 10vh;
+}
+
+.padding-left {
+	padding-left: 5vh;
 }
