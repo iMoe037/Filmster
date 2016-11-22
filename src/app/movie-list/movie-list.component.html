@@ -1,8 +1,44 @@
+<app-modal [(visible)]="showModal">
+    <div class="modal-background"
+    [style.background-image]="'url(' + backDrop(currentMovie?.poster_path)+ ')'">
+    </div>
+    <div class="overlay"></div>
+    <div class="modal-content">
+        <div class="row justify-sb padding">
+            <a [hidden]="checkMovieBegin()" (click)="changeModalMovie('dec')" class="modal-move-links"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
+            <a (click)="showModal = !showModal" class="modal-move-links"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <a [hidden]="checkMovieEnd()" (click)="changeModalMovie('inc')" class="modal-move-links">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="container padding-top">
+            <div class="row">
+                <div class="col">
+                     <div class="movie-container"
+                    [style.background-image]="'url(' + hasImage(currentMovie?.poster_path)+ ')'"
+                    >
+                    </div>
+                </div>
+                <div class="col justify-c grow padding-left">
+                    <div class="row"><h2>{{currentMovie?.original_title}}</h2></div>
+                    <div class="row">
+                        <h5>Score: {{currentMovie?.vote_average}} | Release Date: {{currentMovie?.release_date | date}}</h5>
+                    </div>
+                    <div class="row">
+                        <hr>
+                        <p>{{currentMovie?.overview}}</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-modal>
+
 <div class="container">
     <div class="row wrap justify-c">
         <div class="movie-container" 
-        	*ngFor="let movie of movies"
-        	[style.background-image]="'url(' + hasImage(movie.poster_path, movie.original_title)+ ')'" >
+        	*ngFor="let movie of movies; let i = index"
+            (click) = "openModal(movie, i)"
+        	[style.background-image]="'url(' + hasImage(movie.poster_path)+ ')'" >
         </div>
     </div>
     <app-pagination (onPageChange)="onPageChange($event)"></app-pagination>
