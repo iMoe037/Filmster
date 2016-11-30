@@ -10,6 +10,7 @@ export class NavbarComponent implements OnInit {
 
 	title = 'Filmster';
   currentURL;
+  menuToggle = false;
 
   constructor(
   	private router: Router) {
@@ -30,5 +31,4 @@ export class NavbarComponent implements OnInit {
   active(link:string): boolean {
     return (link === this.currentURL)
   }
-
 }
