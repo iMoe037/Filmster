@@ -7,9 +7,24 @@
             <div class="title">{{title}}</div>
         </div>
         <div class="row justify-fe">
-            <a [ngClass]="{'active': active('') }" class="item" (click)="gotoLink($event)">Home</a>
-            <a [ngClass]="{'active': active('movies') }" class="item" (click)="gotoLink($event)">Movies</a>
-            <a [ngClass]="{'active': active('about') }" class="item" (click)="gotoLink($event)">About</a>
+            <div class="dropdown">
+                <div [class.open]="menuToggle" (click)="menuToggle = !menuToggle" class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div [class.show]="menuToggle" class="dropdown-content" (click)="menuToggle = !menuToggle">
+                     <a [ngClass]="{'active-dropdown': active('') }" class="item-dropdown" (click)="gotoLink($event)">Home</a>
+                    <a [ngClass]="{'active-dropdown': active('movies') }" class="item-dropdown" (click)="gotoLink($event)">Movies</a>
+                    <a [ngClass]="{'active-dropdown': active('about') }" class="item-dropdown" (click)="gotoLink($event)">About</a>
+                </div>
+            </div>
+            <div class="links row justify-fe">
+                <a [ngClass]="{'active': active('') }" class="item" (click)="gotoLink($event)">Home</a>
+                <a [ngClass]="{'active': active('movies') }" class="item" (click)="gotoLink($event)">Movies</a>
+                <a [ngClass]="{'active': active('about') }" class="item" (click)="gotoLink($event)">About</a>
+            </div>
         </div>
     </div>
 </div>
