@@ -1,4 +1,7 @@
 @import "../../scss/milligram/Color";
+@import "../../scss/milligram/Media";
+
+$movie-background: #eff1f2;
 
 .movie-container {
 	width: 17.813vw;
@@ -8,6 +11,53 @@
 	border-radius: 5px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.movie-background {
+	background-color: $movie-background;
+}
+
+@media (max-width: 1430px) and #{$gt-lg} {
+	.movie-container {
+		width: 21.813vw;
+		height: 32.719vw;
+	}
+}
+
+@media #{$gt-md} and #{$lg} {
+	.movie-container {
+		width: 20.813vw;
+		height: 30.719vw;
+	}
+}
+
+@media #{$gt-sm} and #{$md} {
+	.movie-container {
+		width: 42.813vw;
+		height: 63.719vw;
+	}
+}
+
+@media #{$sm} {
+	.movie-container {
+		width: 37.813vw;
+		height: 56.719vw;
+	}
+}
+
+@media #{$xs} {
+	.movie-container {
+		width: 35.813vw;
+		height: 53.719vw;
+	}
+}
+
+@media (min-width: 1919px) {
+	.movie-container {
+		width: 342px;
+		height: 513px;
+	}
+}
+
 
 .modal-background {
 	height: 100%;
@@ -54,7 +104,8 @@
 	font-size: x-large;
 }
 
-.modal-move-links:hover {
+.modal-move-links:hover,
+.modal-move-links:hover  i {
 	color: $color-primary;
 }
 

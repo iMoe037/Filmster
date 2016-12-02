@@ -21,7 +21,7 @@ import { ModalComponent } from './modal/modal.component';
     routedComponents,
     AboutComponent,
     PaginationComponent,
-    ModalComponent
+    ModalComponent,
   ],
   imports: [
     AppRoutingModule,

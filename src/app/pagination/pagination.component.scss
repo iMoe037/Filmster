@@ -1,3 +1,6 @@
+@import "../../scss/milligram/Color";
+@import "../../scss/milligram/Media";
+
 .pagination {
 	display: flex;
 	list-style: none;
@@ -21,10 +24,20 @@
 }
 
 .pageActive {
-	background-color: #4CAF50;
+	background-color: $color-primary;
 	color: white;
 }
 
 .pagination li:hover:not(.pageActive) {
 	background-color: #ddd;
+}
+
+.margin-top {
+	margin-top: 25px;
+}
+
+@media #{$sm} {
+	.pagination li {
+		font-size: smaller;
+	}
 }

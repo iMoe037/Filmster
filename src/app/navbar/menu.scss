@@ -79,7 +79,7 @@
   left: 50%;
 }
 
-@media #{$gt-sm} {
+@media #{$gt-md} {
   .hamburger-menu {
     display: none;
   }
