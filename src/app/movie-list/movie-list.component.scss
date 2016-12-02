@@ -116,3 +116,38 @@ $movie-background: #eff1f2;
 .padding-left {
 	padding-left: 5vh;
 }
+
+.padding-top-mobile {
+	padding-top: 2vh;
+}
+
+.padding-left-mobile {
+	padding-left: 1vh;
+}
+
+//Responsive Modal Content
+
+@media #{$sm} {
+	.hide-sm {
+		display: none;
+	}
+}
+
+@media #{$gt-sm} {
+	.hide-gt-sm {
+		display: none;
+	}
+}
+
+.movie-info {
+	margin: 0;
+}
+
+.movie-info-content {
+	font-weight: 400;
+}
+
+.movie-mobile-summary {
+	padding: 0 1vh 0 1vh;
+	text-align: center;
+}

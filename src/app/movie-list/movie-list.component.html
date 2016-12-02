@@ -9,7 +9,8 @@
             <a (click)="closeModal()" class="modal-move-links"><i class="fa fa-times" aria-hidden="true"></i></a>
             <a [hidden]="checkMovieEnd()" (click)="changeModalMovie('inc')" class="modal-move-links">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
         </div>
-        <div class="container padding-top">
+        <!--Larger Than Mobile-->
+        <div class="container padding-top hide-sm">
             <div class="row">
                 <div class="col">
                      <div class="movie-container"
@@ -30,6 +31,41 @@
                 </div>
             </div>
         </div>
+        <!--End Larger Than Mobile-->
+        <!--Mobile Only-->
+        <div class="container hide-gt-sm padding-top-mobile">
+            <div class="row">
+                <div class="col">
+                    <div class="movie-container"
+                    [style.background-image]="'url(' + hasImage(currentMovie?.poster_path)+ ')'"
+                    >
+                    </div>
+                </div>
+                <div class="col grow padding-left-mobile">
+                    <div class="row padding-top-mobile">
+                        <h5 class="movie-info">Score: </h5>
+                    </div>
+                    <div class="row">
+                        <h4 class="movie-content">{{currentMovie?.vote_average}}</h4>
+                    </div>
+                    <div class="row">
+                        <h5 class="movie-info">Release Date: </h5>
+                    </div>
+                    <div class="row">
+                        <h4 class="movie-content">{{currentMovie?.release_date | date}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container hide-gt-sm padding-top-mobile">
+            <div class="row justify-c">
+                <h1>{{currentMovie?.original_title}}</h1>
+            </div>
+            <div class="row">
+                <p class="movie-mobile-summary" >{{currentMovie?.overview}}</p>
+            </div>
+        </div>
+        <!--End Mobile-->
     </div>
 </app-modal>
 

@@ -1,6 +1,36 @@
 <div class="container">
-    <div class="row justify-c">
-        <h2> To do later Go to 
+    <div class="col justify-c align-i-c">
+        <h1>Version 0.1.0 Alpha</h1>
+        <h3>Initial Release</h3>
+        <h5>Features</h5>
+        <div class="row justify-fs">
+            <ul>
+                <li>Clean, Efficient way to browse movie data</li>
+                <li>Responsive Mobile Friendly**</li>
+                <li>Pagination multiple pages of movies and films</li>
+            </ul>
+        </div>
+       
+        <h5>Known Bugs</h5>
+        <p>Because this is the initial release and because I decided to do things from scratch bugs are expected.</p>
+        <div class="row justify-fs">
+            <ul>
+                <li>iOS doesn't care about meta tags, so gestures are not being blocked</li>
+                <li>Android click events are slightly slow</li>
+                <li>Double press click on the modal on android causes the scrollbar to get stuck</li>
+                <li>Modal buttons do not work on iOS so you get trapped</li>
+                <li>Animations don't work on iOS</li>
+                <li>Pls Stahp iOS</li>
+            </ul>
+        </div>
+        <h5>What's Next</h5>
+        <div class="row justify-fs">
+            <ul>
+                <li>Squashing Known Bugs</li>
+                <li>Build a more robust angular service to display data differently</li>
+            </ul>
+        </div>
+        <h2> Click Here to go to
 			<a (click)="goToMovies()">Movies!</a> 
 		</h2>
     </div>
