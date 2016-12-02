@@ -6,7 +6,7 @@
     <div class="modal-content">
         <div class="row justify-sb padding">
             <a [hidden]="checkMovieBegin()" (click)="changeModalMovie('dec')" class="modal-move-links"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
-            <a (click)="showModal = !showModal" class="modal-move-links"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <a (click)="closeModal()" class="modal-move-links"><i class="fa fa-times" aria-hidden="true"></i></a>
             <a [hidden]="checkMovieEnd()" (click)="changeModalMovie('inc')" class="modal-move-links">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
         </div>
         <div class="container padding-top">
@@ -33,7 +33,7 @@
     </div>
 </app-modal>
 
-<div class="container">
+<div class="container movie-background">
     <div class="row wrap justify-c">
         <div class="movie-container" 
         	*ngFor="let movie of movies; let i = index"

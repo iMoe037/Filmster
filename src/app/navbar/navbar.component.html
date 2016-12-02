@@ -14,8 +14,8 @@
                     <span></span>
                     <span></span>
                 </div>
-                <div [class.show]="menuToggle" class="dropdown-content" (click)="menuToggle = !menuToggle">
-                     <a [ngClass]="{'active-dropdown': active('') }" class="item-dropdown" (click)="gotoLink($event)">Home</a>
+                <div [@collapse]="!menuToggle ? 'true' : 'false'" class="dropdown-content" (click)="menuToggle = !menuToggle">
+                    <a [ngClass]="{'active-dropdown': active('') }" class="item-dropdown" (click)="gotoLink($event)">Home</a>
                     <a [ngClass]="{'active-dropdown': active('movies') }" class="item-dropdown" (click)="gotoLink($event)">Movies</a>
                     <a [ngClass]="{'active-dropdown': active('about') }" class="item-dropdown" (click)="gotoLink($event)">About</a>
                 </div>

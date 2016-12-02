@@ -16,6 +16,7 @@ export class MovieListComponent implements OnInit {
 	showModal: boolean = false;
 	currentMovie: any = null;
 	modalIdx: number;
+	body;
 
   constructor(
   	private movieApiService: MovieApiService
@@ -55,12 +56,18 @@ export class MovieListComponent implements OnInit {
 		this.showModal = !this.showModal;
 		this.currentMovie = movie;
 		this.modalIdx = index;
+		this.body = (!this.body) ? document.getElementsByTagName('BODY')[0] : this.body;
+		this.body.style.overflow = 'hidden';
+	}
+
+	closeModal(): void {
+		this.body.style = '';
+		this.showModal = !this.showModal;
 	}
 
 	changeModalMovie(action: string) {
 		(action === 'inc') ? this.modalIdx += 1 : this.modalIdx -= 1;
 		this.currentMovie = this.movies[this.modalIdx];
-		console.log(this.currentMovie);
 	}
 
 	checkMovieEnd():	boolean {
