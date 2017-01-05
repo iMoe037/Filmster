@@ -1,11 +1,13 @@
 <div class="container nav">
     <div class="row justify-sb">
-        <div class="row justify-fs align-i-c">
-            <div class="logo">
-                <i class="fa fa-ticket" aria-hidden="true"></i>
+        <a (click)="gotoLink(null)">
+            <div class="row justify-fs align-i-c">
+                <div class="logo">
+                    <i class="fa fa-ticket" aria-hidden="true"></i>
+                </div>
+                <div class="title">{{title}}</div>
             </div>
-            <div class="title">{{title}}</div>
-        </div>
+        </a>
         <div class="row justify-fe">
             <div class="dropdown">
                 <div [class.open]="menuToggle" (click)="menuToggle = !menuToggle" class="hamburger-menu">

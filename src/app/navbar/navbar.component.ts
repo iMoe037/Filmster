@@ -25,7 +25,12 @@ export class NavbarComponent implements OnInit {
   }
 
   gotoLink(e): void {
-    let link = e.target.innerHTML.toLowerCase();
+    let link = 'home';
+
+    if (typeof e === 'object' && e !== null ) {
+      link = e.target.innerHTML.toLowerCase();
+    }
+
     link = (link === 'home') ? '' : link;
   	this.router.navigate(['/' + link])
   }
