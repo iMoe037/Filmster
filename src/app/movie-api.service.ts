@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-// import { movie_api } from '../keys';
+import { environment } from '../environments/environment';
 
 import { Movie } from './movie';
 import { Observable } from 'rxjs/Observable';
@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class MovieApiService {
-	private moviesUrl = 'http://api.themoviedb.org/3/movie/now_playing?api_key=' + process.env.movie_api
+	private moviesUrl = 'https://api.themoviedb.org/3/movie/now_playing?api_key=' + environment.car_api
   constructor(private http: Http) { }
 
   getMovies (page: number): Observable<Movie[]> {
