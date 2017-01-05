@@ -33,12 +33,12 @@ export class MovieListComponent implements OnInit {
   }
 
   hasImage(ImgLink : string) : string {
-    const beginLink = 'http://image.tmdb.org/t/p/w342';
+    const beginLink = 'https://image.tmdb.org/t/p/w342';
     return ImgLink ? (beginLink + ImgLink) : 'https://placeholdit.imgix.net/~text?txtsize=40&txt=No+Image+Available+%3D%28&w=342&h=513&txttrack=0';
   }
 
 	backDrop(imgLink: string) : string {
-		const link = 'http://image.tmdb.org/t/p/original';
+		const link = 'https://image.tmdb.org/t/p/original';
 		return imgLink ? (link + imgLink) : '';
 	}
 
