@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-// import { Keys } from '../keys';
+// import { movie_api } from '../keys';
 
 import { Movie } from './movie';
 import { Observable } from 'rxjs/Observable';
