@@ -1,6 +1,7 @@
 {
   "name": "filmster",
   "version": "0.1.0",
+  "engine": "7.1.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
