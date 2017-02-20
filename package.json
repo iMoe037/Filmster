@@ -1,7 +1,10 @@
 {
   "name": "filmster",
   "version": "0.1.0",
-  "engine": "7.1.0",
+  "engines": {
+    "node": "7.1.0",
+    "npm": "4.1.0"
+  },
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -24,7 +27,7 @@
     "@angular/platform-browser": "~2.1.0",
     "@angular/platform-browser-dynamic": "~2.1.0",
     "@angular/router": "~3.1.0",
-    "@types/jasmine": "^2.2.30",
+    "@types/jasmine": "2.5.35",
     "@types/node": "^6.0.42",
     "angular-cli": "1.0.0-beta.18",
     "body-parser": "^1.16.1",
